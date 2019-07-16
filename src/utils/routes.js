@@ -11,11 +11,6 @@ const routes = [
     route: '/smooth-scroll-to',
   },
   {
-    id: 'get-object-value',
-    name: '2、get-object-value',
-    route: '/get-object-value',
-  },
-  {
     id: 'graphanalyse',
     name: '2、图表统计', // 图表分析
     route: '/graphanalyse',
