@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@antv/data-set": "^0.10.1",
+    "@lxfriday/smooth-scroll-to": "^1.0.1",
     "ant-design-pro": "^2.1.1",
     "antd": "^3.19.5",
     "bizcharts": "^3.4.2",
@@ -26,6 +27,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-highcharts": "^16.0.2",
     "react-perfect-scrollbar": "^1.4.2",
     "store": "^2.0.12"
   },
