@@ -26,11 +26,50 @@ class Dashboard extends Component {
     return (
       <div style={{ height: 3000 }}>
         <Card bordered={false} bodyStyle={{ padding: 0 }}>
-          <Button onClick={() => this.props.app.scrollContainerTo(2500)}>go to 1000</Button>
+          <Button onClick={() => this.props.app.scrollContainerTo(5000)}>go to 1000</Button>
         </Card>
-        <div style={{ height: 1000, backgroundColor: 'red' }} />
-        <div style={{ height: 1000, backgroundColor: 'green' }} />
-        <div style={{ height: 1000, backgroundColor: 'yellow' }} />
+        <div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} />
+
+        <div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} />
+
+        <div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} />
+
+        <div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} />
+        <div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} /><div style={{ height: 300, backgroundColor: 'red' }} />
+        <div style={{ height: 300, backgroundColor: 'green' }} />
+        <div style={{ height: 300, backgroundColor: 'yellow' }} />
       </div>
     )
   }

@@ -32,7 +32,10 @@ class PrimaryLayout extends Component {
   }
 
   scrollContainerTo = pos => {
-    smoothScrollTo(this.primaryLayoutContainer, pos)
+    console.log({
+      a: this.primaryLayoutContainer,
+    })
+    smoothScrollTo(this.primaryLayoutContainer, pos, 1.1)
   }
 
   render() {
@@ -82,3 +85,4 @@ PrimaryLayout.propTypes = {
 }
 
 export default PrimaryLayout
+
