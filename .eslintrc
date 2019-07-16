@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "plugin:prettier/recommended",
+    "eslint-config-umi"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn"
+  }
+}
