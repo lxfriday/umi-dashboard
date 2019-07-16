@@ -141,12 +141,10 @@ class Login extends PureComponent {
           style={{
             height: type === 'signin' ? 320 : type === 'signup' ? 500 : 380,
             marginTop: type === 'signup' ? -240 : -160,
-          }}
-        >
+          }}>
           <div className={styles.logo}>
             <span>
-              {config.siteName} |{' '}
-              {type === 'signin' ? '登录' : type === 'signup' ? '注册' : '忘记密码'}
+              {config.siteName} | {type === 'signin' ? '登录' : type === 'signup' ? '注册' : '忘记密码'}
             </span>
           </div>
           <Row>

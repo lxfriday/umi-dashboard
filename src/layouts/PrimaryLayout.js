@@ -6,6 +6,7 @@ import { Layout } from 'antd'
 import { MyLayout } from '@/components'
 import Error from '../pages/404'
 import { pathMatchRegexp } from '@/utils'
+import smoothScrollTo from '@lxfriday/smooth-scroll-to'
 import styles from './PrimaryLayout.less'
 
 const { Content } = Layout
@@ -14,9 +15,13 @@ const { Sider, NavBar } = MyLayout
 @withRouter
 @connect(({ app, loading }) => ({ app, loading }))
 class PrimaryLayout extends Component {
-  // 检测用户是否已经登录了
-  checkUserLoggedIn = () => {
-    return this.props.loggedIn
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'app/addContainerScroller',
+      payload: {
+        scrollContainerTo: this.scrollContainerTo,
+      },
+    })
   }
 
   // 点击退出登录
@@ -24,6 +29,10 @@ class PrimaryLayout extends Component {
     this.props.dispatch({
       type: 'app/logoutEffect',
     })
+  }
+
+  scrollContainerTo = pos => {
+    smoothScrollTo(this.primaryLayoutContainer, pos)
   }
 
   render() {
@@ -53,12 +62,10 @@ class PrimaryLayout extends Component {
       <Fragment>
         <Layout>
           <Sider {...siderProps} />
-          <div className={styles.container} id="primaryLayout">
+          <div className={styles.container} id="primaryLayout" ref={r => (this.primaryLayoutContainer = r)}>
             {/*<Loader fullScreen={false} spinning={loading.global} />*/}
             <NavBar {...navbarProps} />
-            <Content className={styles.content}>
-              {pageExist ? children : <Error location={location} />}
-            </Content>
+            <Content className={styles.content}>{pageExist ? children : <Error location={location} />}</Content>
           </div>
         </Layout>
       </Fragment>

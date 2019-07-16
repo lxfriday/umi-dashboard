@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Button, Form, Input, Row } from 'antd'
-import {
-  checkUserNameValid,
-  checkPasswordValid,
-  checkConfirmPasswordValid,
-  checkPhoneValid,
-} from '@/utils/user'
+import { checkUserNameValid, checkPasswordValid, checkConfirmPasswordValid, checkPhoneValid } from '@/utils/user'
 
 const FormItem = Form.Item
 @Form.create()
@@ -99,14 +94,7 @@ class SignUp extends Component {
                 pattern: /^[\w]{6,30}$/,
               },
             ],
-          })(
-            <Input
-              type="password"
-              onPressEnter={this.handleSubmit}
-              placeholder="密码"
-              maxLength={30}
-            />,
-          )}
+          })(<Input type="password" onPressEnter={this.handleSubmit} placeholder="密码" maxLength={30} />)}
         </FormItem>
         <FormItem hasFeedback>
           {getFieldDecorator('confirmPass', {
@@ -116,14 +104,7 @@ class SignUp extends Component {
                 validator: this.handleValidateConfirmPass,
               },
             ],
-          })(
-            <Input
-              type="password"
-              onPressEnter={this.handleSubmit}
-              placeholder="确认密码"
-              maxLength={30}
-            />,
-          )}
+          })(<Input type="password" onPressEnter={this.handleSubmit} placeholder="确认密码" maxLength={30} />)}
         </FormItem>
         <Row>
           <Button type="primary" onClick={this.handleSubmit} loading={loading}>

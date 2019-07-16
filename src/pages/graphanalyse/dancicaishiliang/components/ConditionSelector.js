@@ -91,13 +91,7 @@ class ConditionSelector extends Component {
           <Row gutter={8}>
             <Col md={8}>
               <FormItem label="测定站号">
-                <Select
-                  value={selectedStationid}
-                  placeholder="选择测定站"
-                  style={{ width: '100%' }}
-                  size="small"
-                  onChange={this.handleSelectStation}
-                >
+                <Select value={selectedStationid} placeholder="选择测定站" style={{ width: '100%' }} size="small" onChange={this.handleSelectStation}>
                   {stationListNode}
                 </Select>
               </FormItem>

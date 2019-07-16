@@ -29,7 +29,7 @@ class ForgetPass extends Component {
         () => {
           resetFields()
           messSuccess('请前往邮箱确认身份信息')
-        },
+        }
       )
     })
   }
@@ -71,14 +71,7 @@ class ForgetPass extends Component {
                 pattern: /^[\w]{6,30}$/,
               },
             ],
-          })(
-            <Input
-              type="password"
-              onPressEnter={this.handleSubmit}
-              placeholder="密码"
-              maxLength={30}
-            />,
-          )}
+          })(<Input type="password" onPressEnter={this.handleSubmit} placeholder="密码" maxLength={30} />)}
         </FormItem>
         <FormItem hasFeedback>
           {getFieldDecorator('confirmPass', {
@@ -88,14 +81,7 @@ class ForgetPass extends Component {
                 validator: that.handleInputConfirmPass,
               },
             ],
-          })(
-            <Input
-              type="password"
-              onPressEnter={this.handleSubmit}
-              placeholder="确认密码"
-              maxLength={30}
-            />,
-          )}
+          })(<Input type="password" onPressEnter={this.handleSubmit} placeholder="确认密码" maxLength={30} />)}
         </FormItem>
         <Row>
           <Button type="primary" onClick={this.handleSubmit} loading={loading}>

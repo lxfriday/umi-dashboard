@@ -51,14 +51,7 @@ class SignIn extends Component {
                 pattern: /^[\w]{6,30}$/,
               },
             ],
-          })(
-            <Input
-              type="password"
-              onPressEnter={this.handleSubmit}
-              placeholder="密码"
-              maxLength={30}
-            />,
-          )}
+          })(<Input type="password" onPressEnter={this.handleSubmit} placeholder="密码" maxLength={30} />)}
         </FormItem>
         <Row>
           <Button type="primary" onClick={this.handleSubmit} loading={loading}>

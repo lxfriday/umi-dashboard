@@ -11,14 +11,7 @@ class Sider extends PureComponent {
     const { menus, theme, openKeys } = this.props
 
     return (
-      <Layout.Sider
-        width={240}
-        theme={theme}
-        breakpoint="lg"
-        trigger={null}
-        collapsed={false}
-        className={styles.sider}
-      >
+      <Layout.Sider width={240} theme={theme} breakpoint="lg" trigger={null} collapsed={false} className={styles.sider}>
         <div className={styles.brand}>
           <div className={styles.logo}>
             {/*<img alt="logo" src={config.logoPath}/>*/}
@@ -31,8 +24,7 @@ class Sider extends PureComponent {
             option={{
               // Disabled horizontal scrolling, https://github.com/utatti/perfect-scrollbar#options
               suppressScrollX: true,
-            }}
-          >
+            }}>
             <SiderMenu menus={menus} theme={theme} openKeys={openKeys} />
           </ScrollBar>
         </div>

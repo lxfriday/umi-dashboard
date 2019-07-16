@@ -28,14 +28,7 @@ class SignIn extends Component {
                 message: '密码不符合规范',
               },
             ],
-          })(
-            <Input
-              type="password"
-              onPressEnter={this.handleOk}
-              placeholder="密码"
-              maxLength={25}
-            />,
-          )}
+          })(<Input type="password" onPressEnter={this.handleOk} placeholder="密码" maxLength={25} />)}
         </FormItem>
         {type === 'signup' && (
           <FormItem hasFeedback>
@@ -46,14 +39,7 @@ class SignIn extends Component {
                   message: '确认密码不能为空',
                 },
               ],
-            })(
-              <Input
-                type="password"
-                onPressEnter={this.handleOk}
-                placeholder="确认密码"
-                maxLength={25}
-              />,
-            )}
+            })(<Input type="password" onPressEnter={this.handleOk} placeholder="确认密码" maxLength={25} />)}
           </FormItem>
         )}
         <Row>

@@ -54,7 +54,7 @@ export default {
       {
         payload: { data },
       },
-      { call, put },
+      { call, put }
     ) {},
   },
 

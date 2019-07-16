@@ -9,8 +9,7 @@ const Loader = ({ spinning = true, fullScreen = true }) => {
       className={classNames(styles.loader, {
         [styles.hidden]: !spinning,
         [styles.fullScreen]: fullScreen,
-      })}
-    >
+      })}>
       <div className={styles.wrapper}>
         <div className={styles.inner} />
         <div className={styles.text}>LOADING</div>

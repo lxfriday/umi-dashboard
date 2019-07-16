@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'dva'
-import { Card } from 'antd'
+import { Card, Button } from 'antd'
 import TimerEnhance from '@/utils/TimerEnhance'
 
 import styles from './index.less'
 
-@connect(({ dashboard }) => ({
+@connect(({ dashboard, app }) => ({
   dashboard,
+  app,
 }))
 @TimerEnhance
 class Dashboard extends Component {
@@ -23,11 +24,14 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div style={{ height: 3000 }}>
         <Card bordered={false} bodyStyle={{ padding: 0 }}>
-          hello
+          <Button onClick={() => this.props.app.scrollContainerTo(2500)}>go to 1000</Button>
         </Card>
-      </Fragment>
+        <div style={{ height: 1000, backgroundColor: 'red' }} />
+        <div style={{ height: 1000, backgroundColor: 'green' }} />
+        <div style={{ height: 1000, backgroundColor: 'yellow' }} />
+      </div>
     )
   }
 }

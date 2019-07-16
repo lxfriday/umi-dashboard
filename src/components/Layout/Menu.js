@@ -20,8 +20,7 @@ class SiderMenu extends PureComponent {
                 {item.icon && <Icon type={item.icon} theme="filled" />}
                 <span>{item.name}</span>
               </Fragment>
-            }
-          >
+            }>
             {this.generateMenus(item.children)}
           </SubMenu>
         )
@@ -48,9 +47,7 @@ class SiderMenu extends PureComponent {
 
     // Find the key that should be selected according to the current menu.
     // 页面刷新的时候，依据路由找到 Menu 应该让哪一个 key 处于选中状态
-    const selectedKeys = currentMenu
-      ? queryAncestors(menus, currentMenu, 'menuParentId').map(_ => _.id)
-      : []
+    const selectedKeys = currentMenu ? queryAncestors(menus, currentMenu, 'menuParentId').map(_ => _.id) : []
 
     return (
       <Menu mode="inline" theme={theme} openKeys={openKeys} selectedKeys={selectedKeys}>

@@ -50,21 +50,12 @@ export default ComposedComponent => {
 
   let _animationFrames = 'TimerEnhance_animationFrames'
   let _cancelAnimationFrame = clearer(cancelAnimationFrame, _animationFrames)
-  let _requestAnimationFrame = setter(
-    requestAnimationFrame,
-    _cancelAnimationFrame,
-    _animationFrames,
-  )
+  let _requestAnimationFrame = setter(requestAnimationFrame, _cancelAnimationFrame, _animationFrames)
 
   return class extends ComposedComponent {
     componentWillUnmount() {
       super.componentWillUnmount && super.componentWillUnmount()
-      let {
-        [_timeouts]: timeouts,
-        [_intervals]: intervals,
-        [_immediates]: immediates,
-        [_animationFrames]: animationFrames,
-      } = this
+      let { [_timeouts]: timeouts, [_intervals]: intervals, [_immediates]: immediates, [_animationFrames]: animationFrames } = this
       timeouts &&
         timeouts.forEach(timerId => {
           clearTimeout(timerId)

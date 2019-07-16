@@ -37,7 +37,7 @@ class Exception extends React.PureComponent {
               {
                 href: redirect,
               },
-              <Button type="primary">{backText}</Button>,
+              <Button type="primary">{backText}</Button>
             )}
           </div>
         </div>

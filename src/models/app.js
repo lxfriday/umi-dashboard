@@ -21,6 +21,7 @@ export default {
     locationQuery: {},
     theme: 'light',
     openKeys: ['graphanalyse'], // 侧边栏菜单打开状态的 keys
+    scrollContainerTo: () => {},
   },
   subscriptions: {
     setupHistory({ dispatch, history }) {
@@ -48,7 +49,7 @@ export default {
       {
         payload: { data },
       },
-      { call, put },
+      { call, put }
     ) {
       try {
         const result = yield call(signInService, {
@@ -88,7 +89,7 @@ export default {
       {
         payload: { data },
       },
-      { call, put },
+      { call, put }
     ) {
       try {
         const result = yield call(signUpService, {
@@ -132,7 +133,7 @@ export default {
       {
         payload: { data, cb },
       },
-      { call },
+      { call }
     ) {
       try {
         const result = yield call(forgetPassService, {
@@ -175,6 +176,12 @@ export default {
     // },
   },
   reducers: {
+    addContainerScroller(state, { payload }) {
+      return {
+        ...state,
+        scrollContainerTo: payload.scrollContainerTo,
+      }
+    },
     signInReducer(state, { payload }) {
       return {
         ...state,
