@@ -16,14 +16,19 @@ const routes = [
     route: '/get-object-value',
   },
   {
+    id: 'react-highcharts',
+    name: '3、react-highcharts',
+    route: '/react-highcharts',
+  },
+  {
     id: 'graphanalyse',
-    name: '2、图表统计', // 图表分析
+    name: '图表统计', // 图表分析
     route: '/graphanalyse',
   },
   {
     id: 'graphanalyse_dancicaishiliang',
     menuParentId: 'graphanalyse',
-    name: '2-1、表格', // 单次采食量
+    name: '表格', // 单次采食量
     route: '/graphanalyse/dancicaishiliang',
   },
 ]

@@ -28,6 +28,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-highcharts": "^16.0.2",
     "react-perfect-scrollbar": "^1.4.2",
     "store": "^2.0.12"
   },
