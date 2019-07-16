@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'dva'
 import { Card, Button } from 'antd'
 import TimerEnhance from '@/utils/TimerEnhance'

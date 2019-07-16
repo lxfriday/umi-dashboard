@@ -6,9 +6,14 @@ const routes = [
     hide: true, // 不显示 重定向到 /dashboard
   },
   {
-    id: 'dashboard',
-    name: '1、1111111',
-    route: '/dashboard',
+    id: 'smooth-scroll-to',
+    name: '1、smooth-scroll-to',
+    route: '/smooth-scroll-to',
+  },
+  {
+    id: 'get-object-value',
+    name: '2、get-object-value',
+    route: '/get-object-value',
   },
   {
     id: 'graphanalyse',
